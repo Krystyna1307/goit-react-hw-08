@@ -3,13 +3,14 @@ import { Field, Form, Formik } from "formik";
 import * as Yup from "yup";
 import { useDispatch } from "react-redux";
 import { nanoid } from "@reduxjs/toolkit";
-import { addContact } from "../../redux/contactsOps";
+import { addContact } from "../../redux/contacts/operations";
+// import { addContact } from "../../redux/contactsOps";
 
 const ContactForm = () => {
   const initialValues = { name: "", number: "" };
   const dispatch = useDispatch();
 
-  const onSubmit = (values, options) => {
+  const onSubmit = (values) => {
     const newContact = {
       id: nanoid(),
       name: values.name,

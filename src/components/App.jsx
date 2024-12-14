@@ -4,8 +4,10 @@ import ContactList from "./ContactList/ContactList";
 import ContactForm from "./ContactForm/ContactForm";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import { fetchContacts } from "../redux/contactsOps";
-import { selectLoading } from "../redux/selectors";
+import { fetchContacts } from "../redux/contacts/operations";
+import { selectLoading } from "../redux/auth/selectors";
+// import { fetchContacts } from "../redux/contactsOps";
+// import { selectLoading } from "../redux/selectors";
 
 const App = () => {
   const dispatch = useDispatch();
