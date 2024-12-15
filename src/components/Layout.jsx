@@ -1,11 +1,11 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import Navigation from "./Navigation/Navigation";
+import AuthNav from "./AuthNav/AuthNav";
 
 const Layout = () => {
   return (
     <div>
-      <Navigation />
+      <AuthNav />
       <Outlet />
     </div>
   );
