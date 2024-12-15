@@ -1,5 +1,10 @@
 import React from "react";
+import LoginForm from "../../components/LoginForm/LoginForm";
 
 export const HomePage = () => {
-  return <div>Starting page!</div>;
+  return (
+    <div>
+      <LoginForm />
+    </div>
+  );
 };
