@@ -1,10 +1,12 @@
 import React from "react";
 import LoginForm from "../../components/LoginForm/LoginForm";
 
-export const HomePage = () => {
+const HomePage = () => {
   return (
     <div>
       <LoginForm />
     </div>
   );
 };
+
+export default HomePage;
