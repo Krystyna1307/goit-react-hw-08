@@ -1,4 +1,3 @@
-import React from "react";
 import s from "./AppBar.module.css";
 import Navigation from "../Navigation/Navigation";
 import AuthNav from "../AuthNav/AuthNav";
