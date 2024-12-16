@@ -4,7 +4,6 @@ import * as Yup from "yup";
 import { useDispatch } from "react-redux";
 import { nanoid } from "@reduxjs/toolkit";
 import { addContact } from "../../redux/contacts/operations";
-import { useNavigate } from "react-router-dom";
 
 const ContactForm = () => {
   const initialValues = { name: "", number: "" };
