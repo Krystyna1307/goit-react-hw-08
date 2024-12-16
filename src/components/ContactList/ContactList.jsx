@@ -4,12 +4,12 @@ import s from "./ContactList.module.css";
 import { selectFilteredContacts } from "../../redux/contacts/selectors";
 
 const ContactList = () => {
-  const filteredContacts = useSelector(selectFilteredContacts);
+  const contacts = useSelector(selectFilteredContacts);
 
   return (
     <div className={s.wrapper}>
       <ul className={s.list}>
-        {filteredContacts.map((item) => (
+        {contacts.map((item) => (
           <Contact {...item} key={item.id} />
         ))}
       </ul>

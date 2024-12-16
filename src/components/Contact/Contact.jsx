@@ -2,7 +2,6 @@ import { useDispatch } from "react-redux";
 import React from "react";
 import s from "./Contact.module.css";
 import { deleteContact } from "../../redux/contacts/operations";
-// import { deleteContact } from "../../redux/contactsOps.js";
 
 const Contact = ({ id, name, number }) => {
   const dispatch = useDispatch();
@@ -13,7 +12,6 @@ const Contact = ({ id, name, number }) => {
         <span>{name}</span>
         <span>{number}</span>
       </div>
-
       <button onClick={() => dispatch(deleteContact(id))}>Delete</button>
     </li>
   );

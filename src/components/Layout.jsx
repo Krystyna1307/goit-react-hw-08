@@ -1,12 +1,11 @@
-import React from "react";
-import { Outlet } from "react-router-dom";
-import AuthNav from "./AuthNav/AuthNav";
+import { Suspense } from "react";
+import AppBar from "./AppBar/AppBar";
 
-const Layout = () => {
+const Layout = ({ children }) => {
   return (
-    <div>
-      <AuthNav />
-      <Outlet />
+    <div style={{ maxWidth: 960, margin: "0 auto", padding: "0 16px" }}>
+      <AppBar />
+      <Suspense fallback={null}>{children}</Suspense>
     </div>
   );
 };

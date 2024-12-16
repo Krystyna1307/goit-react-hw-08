@@ -1,6 +1,6 @@
 import { createSlice, isAnyOf } from "@reduxjs/toolkit";
 import { addContact, deleteContact, fetchContacts } from "./operations";
-// import { addContact, deleteContact, fetchContacts } from "./contactsOps";
+import { logOut } from "../auth/operations";
 
 const initialState = {
   items: [
@@ -13,7 +13,7 @@ const initialState = {
   error: null,
 };
 
-const slice = createSlice({
+const contactsSlice = createSlice({
   name: "contacts",
   initialState,
   extraReducers: (builder) => {
@@ -28,6 +28,9 @@ const slice = createSlice({
       })
       .addCase(addContact.fulfilled, (state, { payload }) => {
         state.items.push(payload);
+      })
+      .addCase(logOut.fulfilled, (state) => {
+        state.items = [];
       })
 
       .addMatcher(
@@ -65,4 +68,4 @@ const slice = createSlice({
   },
 });
 
-export const contactsSlice = slice.reducer;
+export const contactsReducer = contactsSlice.reducer;
