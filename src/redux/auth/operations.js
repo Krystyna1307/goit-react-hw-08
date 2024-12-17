@@ -18,7 +18,7 @@ export const register = createAsyncThunk(
   async (credentials, thunkAPI) => {
     try {
       const res = await goitApi.post("/users/signup", credentials);
-      setAuthHeader(res.data.token);
+      setAuthHeader(res.data.token); //зашиваємо токен
       return res.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
@@ -31,7 +31,7 @@ export const logIn = createAsyncThunk(
   async (credentials, thunkAPI) => {
     try {
       const res = await goitApi.post("/users/login", credentials);
-      setAuthHeader(res.data.token);
+      setAuthHeader(res.data.token); //зашиваємо токен
       return res.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
@@ -58,7 +58,7 @@ export const refreshUser = createAsyncThunk(
       return thunkAPI.rejectWithValue("Unable to fetch user");
     }
     try {
-      setAuthHeader(persistedToken);
+      setAuthHeader(persistedToken); //зашиваємо токен
       const res = await goitApi.get("/users/current");
       return res.data;
     } catch (error) {
