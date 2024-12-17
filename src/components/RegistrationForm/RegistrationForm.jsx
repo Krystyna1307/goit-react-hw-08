@@ -29,21 +29,21 @@ const RegistrationForm = () => {
   };
 
   return (
-    <div className={s.wrapper}>
+    <div>
       <Formik onSubmit={handleSubmit} initialValues={initialValues}>
         <Form className={s.form}>
           <label className={s.label}>
             Name
-            <Field className={s.input} name="name" />
+            <Field name="name" />
           </label>
 
           <label className={s.label}>
             Email
-            <Field className={s.input} name="email" />
+            <Field name="email" />
           </label>
           <label className={s.label}>
             Password
-            <Field className={s.input} name="password" type="password" />
+            <Field name="password" type="password" />
           </label>
           <button type="submit">Submit</button>
         </Form>

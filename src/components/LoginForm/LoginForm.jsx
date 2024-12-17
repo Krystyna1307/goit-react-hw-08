@@ -17,20 +17,18 @@ const LoginForm = () => {
   };
 
   return (
-    <div className={s.wrapper}>
+    <div>
       <Formik onSubmit={handleSubmit} initialValues={initialValues}>
         <Form className={s.form}>
           <label className={s.label}>
             Email
-            <Field className={s.input} name="email" />
+            <Field name="email" />
           </label>
           <label>
             Password
-            <Field className={s.input} name="password" />
+            <Field name="password" />
           </label>
-          <button type="submit" className={s.btn}>
-            Log In
-          </button>
+          <button type="submit">Log In</button>
         </Form>
       </Formik>
     </div>
