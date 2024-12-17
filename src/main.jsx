@@ -7,6 +7,7 @@ import { store, persistor } from "./redux/store";
 import { BrowserRouter } from "react-router-dom";
 import { PersistGate } from "redux-persist/integration/react";
 import { HelmetProvider } from "react-helmet-async";
+import { Toaster } from "react-hot-toast";
 
 createRoot(document.getElementById("root")).render(
   <Provider store={store}>
@@ -14,6 +15,11 @@ createRoot(document.getElementById("root")).render(
       <BrowserRouter>
         <HelmetProvider>
           <App />
+          <Toaster
+            position="top-center"
+            reverseOrder={true}
+            toastOptions={{ duration: 2000 }}
+          />
         </HelmetProvider>
       </BrowserRouter>
     </PersistGate>
